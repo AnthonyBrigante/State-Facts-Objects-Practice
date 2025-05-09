@@ -90,4 +90,16 @@
 		</div>
 	</div>
 </body>
+<div>
+    <script src="js/state-data.js"></script>
+    <script>
+        document.getElementById('state-list').onchange = function() {
+            var selected = this.value;
+            document.getElementById('info-pic').src = 'img/' + selected + '.jpg'
+            document.getElementById('info-name').textContent = stateData[selected].name;
+            document.getElementById('info-abbreviation').textContent = stateData[selected].abbr;
+            document.getElementById('info-capitol').textContent = stateData[selected].capitol;
+        };
+    </script>
+</div>
 </html>
